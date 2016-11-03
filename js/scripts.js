@@ -1,9 +1,4 @@
 //business logic
-
-
-
-// var rollValue;
-
 function Player() {
   this.rollValue = 0;
   this.round = 0;
@@ -17,12 +12,9 @@ function Game(player1, player2) {
 }
 
  Player.prototype.rollDice = function() {
-  //  rollValue = Math.floor(Math.random()*6 + 1);
    this.rollValue = Math.floor(Math.random()*6 + 1);
 
-
-
- } //add if
+ }
 
 Player.prototype.scoreRound = function() {
  if (this.rollValue === 1) {
@@ -76,7 +68,6 @@ $(document).ready(function() {
 
 
   $("output#roundtotal").text(player1.round);
-  debugger;
   if(player1.round === 0) {
     $("#roll1").hide();
     $("#hold1").hide();
@@ -92,7 +83,6 @@ $(document).ready(function() {
     player1.totalScore(player1.rollValue);
     player1.gameOver(player1.rollValue);
     $("output#player1").text(player1.total);
-    console.log(player1.total)
     $("output#roundtotal").text(0);
     player1.resetRoll();
     $("#hold1").hide();
@@ -128,7 +118,6 @@ $(document).ready(function() {
     player2.totalScore(player2.rollValue);
     player2.gameOver(player2.rollValue);
     $("output#player2").text(player2.total);
-    console.log(player2.total)
     $("output#roundtotal").text(0);
     player2.resetRoll();
     $("#hold2").hide();
