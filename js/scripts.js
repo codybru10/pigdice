@@ -66,6 +66,7 @@ $(document).ready(function() {
   $("#roll2").hide();
   $("#hold2").hide();
 
+  $("#label2").removeClass("label2")
 
   $("#roll1").click(function(event) {
     event.preventDefault();
@@ -81,6 +82,8 @@ $(document).ready(function() {
     $("#hold1").hide();
     $("#roll2").show();
     $("#hold2").show();
+    $("#label2").addClass("label2")
+    $("#label1").removeClass("label1")
   }
 
   });
@@ -97,6 +100,9 @@ $(document).ready(function() {
     $("#hold2").show();
     $("#roll2").show();
 
+    $("#label2").addClass("label2")
+    $("#label1").removeClass("label1")
+
 
   });
   $("#roll2").click(function(event) {
@@ -112,6 +118,8 @@ $(document).ready(function() {
     $("#hold2").hide();
     $("#roll1").show();
     $("#hold1").show();
+    $("#label1").addClass("label1")
+    $("#label2").removeClass("label2")
     }
 
   });
@@ -127,6 +135,9 @@ $(document).ready(function() {
     $("#roll2").hide();
     $("#hold1").show();
     $("#roll1").show();
+
+    $("#label1").addClass("label1")
+    $("#label2").removeClass("label2")
 
 
 
