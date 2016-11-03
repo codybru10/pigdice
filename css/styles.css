@@ -9,3 +9,25 @@ button {
 .col-md-12, .col-md-6{
   text-align: center;
 }
+
+h1 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 5em;
+  text-align: center;
+}
+
+body {
+  font-family: 'Russo One', sans-serif;
+  background: url("../img/background.jpg");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.well {
+  color: black;
+}
+
+html {
+  height: 100%;
+}

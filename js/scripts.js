@@ -27,7 +27,7 @@ function Game(player1, player2) {
 Player.prototype.scoreRound = function() {
  if (this.rollValue === 1) {
    this.round = 0;
-  
+
  } else {
    this.round += this.rollValue;
  }
@@ -45,7 +45,7 @@ Player.prototype.resetRoll = function () {
 }
 
 Player.prototype.gameOver = function () {
-  if (this.total >= 20){
+  if (this.total >= 100){
     this.total = "Winner winner chicken dinner!"
   } else {}
 }
