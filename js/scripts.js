@@ -9,14 +9,10 @@ function Player() {
 
 
  Player.prototype.rollDice = function() {
-debugger;
    rollValue = Math.floor(Math.random()*6 + 1);
-
-
  }
 
 Player.prototype.scoreRound = function() {
-debugger;
  if (rollValue === 1) {
    this.round = 0;
  } else {
@@ -25,7 +21,13 @@ debugger;
 }
 
 Player.prototype.totalScore = function () {
-  this.totalscore += this.round;
+  this.total += this.round;
+}
+
+Player.prototype.resetRoll = function () {
+debugger;
+  this.round = 0;
+  return this.round;
 }
 
 
@@ -36,22 +38,19 @@ $(document).ready(function() {
 
   $("#roll").click(function(event) {
     event.preventDefault();
-debugger;
     player1.rollDice();
-
-    if (rollValue ===1) {
-      player1.scoreRound(player1.rollValue);
-    }
-      else {
-        player1.scoreRound();
-    }
+    player1.scoreRound(rollValue);
 
   $("output#roundtotal").text(player1.round);
 
   });
   $("#hold").click(function(event) {
     event.preventDefault();
-
+debugger;
+    player1.totalScore(rollValue);
+    $("output#player1").text(player1.total);
+    $("output#roundtotal").text(0);
+    player1.resetRoll();
 
   });
 });
