@@ -5,3 +5,7 @@
 button {
   margin-top: 10px;
 }
+
+.col-md-12, .col-md-6{
+  text-align: center;
+}
